@@ -1,0 +1,43 @@
+// -----------------------------------------------------------------------------
+// Соединяем все фрагменты разметки в один файл
+// -----------------------------------------------------------------------------
+
+// Общие фрагметы, которые встречаются на всех страницах
+@import "pages/header";
+@import "pages/navbar";
+@import "pages/footer";
+@import "pages/mobile-menu";
+
+// Фрагметы главной страницы
+@import "pages/main/hero/main";
+@import "pages/main/advantages";
+@import "pages/main/worth";
+@import "pages/main/coworking";
+@import "pages/main/information";
+@import "pages/main/action";
+
+@import "pages/coworking/become";
+@import "pages/coworking/included";
+@import "pages/coworking/statement";
+@import "pages/coworking/excursion";
+@import "pages/coworking/prices";
+@import "pages/coworking/subscription";
+
+@import "pages/milling/milling";
+@import "pages/milling/equipment";
+@import "pages/milling/resident/main";
+@import "pages/milling/service/main";
+@import "pages/milling/analytics";
+
+@import "pages/contacts/contacts";
+@import "pages/contacts/contact-info";
+
+@import "pages/stl/stl-file";
+@import "pages/stl/stl-teeth";
+@import "pages/stl/stl-stage";
+@import "pages/stl/stl-info";
+@import "pages/stl/stl-summary";
+@import "pages/stl/stl-mobile";
+
+@import "pages/404/not-found";
+@import "pages/thank-you/thank-you";

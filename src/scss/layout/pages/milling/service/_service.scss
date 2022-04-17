@@ -1,0 +1,22 @@
+#service {
+  @include breakpoint($breakpoint-tablet-large) {
+    margin-bottom: 80px;
+  }
+
+  .section__title {
+    margin-bottom: 45px;
+  }
+}
+
+.service {
+  position: relative;
+
+  &__slider {
+  }
+
+  &__button {
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

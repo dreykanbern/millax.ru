@@ -1,0 +1,35 @@
+.background {
+  position: relative;
+
+  &__image {
+    position: absolute;
+    pointer-events: none;
+
+    @include breakpoint($breakpoint-laptop) {
+      display: none;
+    }
+
+    &--main-1 {
+      top: -864px;
+      left: -123px;
+
+      @include breakpoint($breakpoint-laptop-large) {
+        left: -215px;
+      }
+    }
+
+    &--milling-1 {
+      right: -186px;
+      bottom: -365px;
+
+      @include breakpoint($breakpoint-laptop-large) {
+        bottom: -300px;
+      }
+    }
+
+    &--milling-2 {
+      bottom: -153px;
+      left: -142px;
+    }
+  }
+}

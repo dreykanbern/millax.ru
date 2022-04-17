@@ -1,0 +1,177 @@
+// -----------------------------------------------------------------------------
+// В этом файле прописываются все стили относящиеся к подвалу сайта
+// -----------------------------------------------------------------------------
+
+#footer {
+  padding-top: 60px;
+  padding-bottom: 25px;
+
+  background-color: $palette-purple;
+  background-image: linear-gradient(90deg, #9966ff 0%, #7976ff 100%), #232222;
+
+  @include breakpoint($breakpoint-laptop) {
+    padding-bottom: 90px;
+  }
+}
+
+.footer-bottom {
+  margin-top: 30px;
+  color: $text-white;
+
+  @include breakpoint($breakpoint-mobile-large) {
+    text-align: center;
+  }
+}
+
+.footer {
+  display: flex;
+
+  @include breakpoint($breakpoint-laptop) {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  @include breakpoint($breakpoint-mobile-large) {
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+  }
+
+  &__hide {
+    @include breakpoint($breakpoint-mobile-large) {
+      display: none;
+    }
+  }
+
+  &__media {
+    max-width: 135px;
+    margin-right: 125px;
+
+    color: $text-white;
+
+    text-align: center;
+
+    @include breakpoint($breakpoint-laptop) {
+      order: 4;
+    }
+
+    @include breakpoint($breakpoint-mobile-large) {
+      margin-top: 25px;
+      margin-right: 0;
+      order: 6;
+    }
+  }
+
+  &__social {
+    margin-top: 25px;
+    font-size: $font-size-4;
+  }
+
+  &__list {
+    @include flex();
+
+    margin-top: 10px;
+
+    &--media {
+    }
+  }
+
+  &__icon {
+    circle,
+    path {
+      transition: all 0.15s ease;
+    }
+
+    &:hover {
+      circle {
+        stroke: $hover-orange;
+      }
+
+      path {
+        fill: $hover-orange;
+      }
+    }
+  }
+
+  &__menu {
+    margin-right: 50px;
+
+    color: $text-white;
+    font-weight: $weight-medium;
+    font-size: $font-size-4;
+
+    @include breakpoint($breakpoint-laptop) {
+      width: 30%;
+      margin-right: 0;
+    }
+
+    @include breakpoint($breakpoint-mobile-large) {
+      width: unset;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__menu-list {
+    margin-top: 15px;
+
+    font-weight: $weight-light;
+    font-size: $font-size-5;
+  }
+
+  &__menu-item {
+    margin-bottom: 10px;
+
+    @include breakpoint($breakpoint-mobile-large) {
+      max-width: 250px;
+    }
+  }
+
+  &__link {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__action {
+    display: flex;
+    flex-direction: column;
+
+    max-width: 170px;
+
+    margin-left: auto;
+    margin-right: 30px;
+
+    color: $text-white;
+    font-weight: $weight-bold;
+
+    @include breakpoint($breakpoint-laptop) {
+      order: 5;
+      margin-right: 0;
+      margin-left: 0;
+
+      max-width: unset;
+    }
+
+    .button {
+      display: none;
+
+      padding-top: 10px;
+      padding-bottom: 10px;
+
+      @include breakpoint($breakpoint-mobile-large) {
+        display: block;
+      }
+    }
+  }
+
+  &__interactive {
+    margin-bottom: 12px;
+
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

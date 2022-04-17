@@ -1,0 +1,54 @@
+.table {
+  width: 100%;
+
+  border-radius: 5px;
+  overflow: hidden;
+
+  box-shadow: $shadow-primary;
+
+  background-color: $palette-white;
+
+  &__caption {
+    padding: 15px 30px;
+
+    color: $text-white;
+    background-image: $table__head--gradient;
+
+    text-align: left;
+
+    @include breakpoint($breakpoint-mobile-large) {
+      padding: 15px 10px;
+    }
+  }
+
+  td {
+    padding: 10px 30px;
+
+    @include last(2) {
+      text-align: right;
+    }
+
+    @include breakpoint($breakpoint-mobile-large) {
+      padding: 10px 5px;
+
+      font-size: $font-size-6;
+    }
+  }
+
+  &__start {
+    td {
+      padding-top: 40px;
+
+      @include breakpoint($breakpoint-mobile-large) {
+        padding-top: 15px;
+      }
+    }
+  }
+
+
+  &__end {
+    td {
+      padding-bottom: 40px;
+    }
+  }
+}

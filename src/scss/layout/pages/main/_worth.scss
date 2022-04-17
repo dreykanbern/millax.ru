@@ -1,0 +1,227 @@
+#worth {
+  position: relative;
+
+  padding-top: 135px;
+  padding-bottom: 140px;
+
+  background-color: $palette-purple;
+  background-image: linear-gradient(81.1deg, #9966ff 6.15%, #7976ff 100.16%);
+
+  color: $text-white;
+
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+
+  @include breakpoint($breakpoint-mobile-large) {
+    padding-top: 60px;
+    padding-bottom: 0;
+
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+}
+
+.worth {
+  position: relative;
+
+  padding-bottom: 130px;
+
+  &__picture {
+    position: relative;
+
+    width: 550px;
+    height: 550px;
+
+    margin: 0 auto;
+
+    @include breakpoint($breakpoint-laptop-large) {
+      width: 450px;
+      height: 450px;
+    }
+
+    @include breakpoint($breakpoint-mobile-large) {
+      display: none;
+    }
+  }
+
+  &__background {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+
+    width: 100%;
+    height: 100%;
+
+    transform: translate(-50%, 50%);
+  }
+
+  &__image {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+
+    width: 400px;
+    height: 400px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+    transform: translate(-50%, 50%);
+
+    @include breakpoint($breakpoint-laptop-large) {
+      width: 365px;
+      height: 365px;
+    }
+  }
+
+  &__wrapper {
+    position: absolute;
+    top: 0;
+    left: 50%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+
+    transform: translateX(-50%);
+
+    @include breakpoint($breakpoint-mobile-large) {
+      position: static;
+
+      transform: translateX(0);
+    }
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+
+    @include breakpoint($breakpoint-mobile-large) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &:nth-child(1) {
+      width: 100%;
+      max-width: 910px;
+
+      margin-bottom: 135px;
+
+      @include breakpoint($breakpoint-laptop-large) {
+        margin-bottom: 100px;
+
+        width: 85%;
+      }
+
+      @include breakpoint($breakpoint-mobile-large) {
+        width: 100%;
+
+        margin-bottom: 0;
+      }
+    }
+
+    &:nth-child(2) {
+      width: 100%;
+      max-width: 1100px;
+
+      margin-bottom: 135px;
+
+      @include breakpoint($breakpoint-laptop-large) {
+        margin-bottom: 100px;
+      }
+
+      @include breakpoint($breakpoint-mobile-large) {
+        margin-bottom: 0;
+      }
+    }
+
+    &:nth-child(3) {
+      width: 100%;
+      max-width: 910px;
+
+      @include breakpoint($breakpoint-laptop-large) {
+        width: 85%;
+      }
+
+      @include breakpoint($breakpoint-mobile-large) {
+        width: 100%;
+      }
+    }
+  }
+
+  &__item {
+    position: relative;
+    @include flex();
+
+    min-width: 230px;
+    max-width: 290px;
+
+    padding: 15px;
+
+    border-radius: 5px;
+
+    color: $text-black;
+    background-color: $palette-white;
+
+    font-size: $font-size-3;
+
+    @include breakpoint($breakpoint-laptop-large) {
+      font-size: $font-size-4;
+
+      max-width: 230px;
+    }
+
+    @include breakpoint($breakpoint-mobile-large) {
+      justify-content: center;
+
+      width: 100%;
+      max-width: unset;
+
+      margin-bottom: 15px;
+      padding: 25px;
+
+      font-size: $font-size-5;
+    }
+
+    &::after {
+      position: absolute;
+
+      display: block;
+
+      width: 42px;
+      height: 42px;
+
+      border-radius: 50%;
+
+      background-color: $palette-white;
+
+      @include breakpoint($breakpoint-mobile-large) {
+        display: none;
+      }
+    }
+
+    &:nth-child(1) {
+      text-align: right;
+
+      @include breakpoint($breakpoint-mobile-large) {
+        text-align: center;
+      }
+
+      &::after {
+        content: "";
+        right: -35px;
+      }
+    }
+
+    &:nth-child(2) {
+      @include breakpoint($breakpoint-mobile-large) {
+        text-align: center;
+      }
+
+      &::after {
+        content: "";
+        left: -35px;
+      }
+    }
+  }
+}

@@ -1,0 +1,74 @@
+.section {
+  padding-top: 135px;
+
+  @include breakpoint($breakpoint-mobile-large) {
+    padding-top: 90px;
+  }
+
+  &__heading {
+    @include flex();
+    flex-direction: column;
+
+    .section__title {
+      margin-bottom: 10px;
+    }
+
+    margin-bottom: 60px;
+  }
+
+  &__title {
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: 60px;
+
+    font-weight: $weight-medium;
+
+    text-align: center;
+
+    @include breakpoint($breakpoint-laptop) {
+      font-size: $font-size-1;
+      line-height: 30px;
+    }
+
+    @include breakpoint($breakpoint-tablet) {
+      font-size: $font-size-3;
+      line-height: 30px;
+    }
+
+    &--left {
+      justify-content: flex-start;
+
+      margin-bottom: 40px;
+
+      @include breakpoint($breakpoint-mobile-large) {
+        justify-content: center;
+      }
+    }
+
+    &--small-mb {
+      margin-bottom: 30px;
+    }
+
+    &--large {
+      font-size: $font-size-0;
+      text-align: left;
+    }
+  }
+
+  &__subtitle {
+    font-weight: $weight-thin;
+    font-size: $font-size-2;
+    line-height: 150%;
+
+    text-align: center;
+
+    @include breakpoint($breakpoint-laptop) {
+      font-size: $font-size-5;
+
+      br {
+        display: none;
+      }
+    }
+  }
+}

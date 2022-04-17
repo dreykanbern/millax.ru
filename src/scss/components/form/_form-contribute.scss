@@ -1,0 +1,29 @@
+.form-contribute {
+  @include flex($align: flex-start);
+  flex-direction: column;
+
+  max-width: 500px;
+
+  padding: 45px 30px 30px 30px;
+
+  color: $text-white;
+  background: linear-gradient(90deg, #9966ff 0%, #7976ff 100%);
+
+  box-shadow: $shadow-secondary;
+  border-radius: 5px;
+
+  @include breakpoint($breakpoint-mobile-large) {
+    padding: 45px 10px 30px 10px;
+
+    border-radius: 0;
+
+    background: $palette-purple;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+
+    font-size: 36px;
+    font-weight: $weight-thin;
+  }
+}

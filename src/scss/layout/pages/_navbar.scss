@@ -1,0 +1,53 @@
+.navbar {
+  @include flex($align: flex-start);
+
+  font-size: $font-size-4;
+
+  @include breakpoint($breakpoint-laptop-large) {
+    font-size: $font-size-5;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+
+    transition: all 0.15s ease;
+
+    &--active {
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 25px;
+        left: 50%;
+        width: calc(100% - 28px);
+
+        transform: translateX(-50%);
+        border-bottom: $border-orange;
+      }
+    }
+
+    &--dropdown {
+      &:hover {
+        .navbar__dropdown {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+    }
+
+    &:hover {
+      color: $text-white;
+      background: #ec821f;
+    }
+  }
+
+  &__link {
+    padding: 8px 14px 25px 14px;
+  }
+
+  &__dropdown {
+    position: absolute;
+    top: 59px;
+    left: 15px;
+  }
+}

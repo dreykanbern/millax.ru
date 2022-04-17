@@ -1,0 +1,94 @@
+#milling {
+}
+
+.milling {
+  position: relative;
+  padding-top: 160px;
+  padding-bottom: 90px;
+
+  color: $text-white;
+
+  overflow: hidden;
+
+  @include breakpoint($breakpoint-laptop-large) {
+    padding-top: 80px;
+
+    br {
+      display: none;
+    }
+  }
+
+  @include breakpoint($breakpoint-mobile-large) {
+    padding-top: 100px;
+  }
+
+  &__background {
+    position: absolute;
+    top: 0;
+    right: 30%;
+    background-image: linear-gradient(81.1deg, #9966ff 6.15%, #7976ff 100.16%);
+    width: 300%;
+    height: 100%;
+
+    @include breakpoint($breakpoint-laptop) {
+      right: -300px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 15px;
+
+    font-size: $font-size-0;
+    font-weight: $weight-regular;
+
+    line-height: 60px;
+
+    @include breakpoint($breakpoint-mobile-large) {
+      font-size: $font-size-3;
+      line-height: unset;
+    }
+  }
+
+  &__description {
+    margin-bottom: 30px;
+
+    font-size: 20px;
+    font-weight: $weight-light;
+
+    @include breakpoint($breakpoint-mobile-large) {
+      font-size: $font-size-6;
+    }
+  }
+
+  &__button {
+    padding-left: 30px;
+    padding-right: 30px;
+
+    @include breakpoint($breakpoint-tablet) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &__picture {
+    width: 100%;
+    height: 416px;
+
+    @include breakpoint($breakpoint-laptop) {
+      height: 300px;
+    }
+
+    @include breakpoint($breakpoint-mobile-large) {
+      height: 210px;
+
+      margin-bottom: 30px;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+  }
+}

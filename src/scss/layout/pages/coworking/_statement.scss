@@ -1,0 +1,56 @@
+#statement {
+  margin-top: 120px;
+  padding: 57px 0;
+  background-color: $palette-purple;
+
+  @include breakpoint($breakpoint-tablet) {
+    margin-top: 65px;
+  }
+}
+
+.statement {
+  color: $text-white;
+
+  &__background {
+    @include breakpoint($breakpoint-laptop) {
+      display: none;
+    }
+  }
+
+  &__item {
+    font-size: $font-size-5;
+
+    @include breakpoint($breakpoint-mobile-large) {
+      font-size: $font-size-5;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 150px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 30px;
+
+    font-size: $font-size-1;
+
+    @include breakpoint($breakpoint-laptop-large) {
+      font-size: $font-size-2;
+    }
+
+    @include breakpoint($breakpoint-mobile-large) {
+      font-size: $font-size-3;
+    }
+  }
+
+  &__photo {
+    width: 100%;
+    height: 427px;
+
+    object-fit: cover;
+
+    @include breakpoint($breakpoint-tablet-large) {
+      height: 320px;
+    }
+  }
+}

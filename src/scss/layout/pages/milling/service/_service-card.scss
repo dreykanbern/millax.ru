@@ -1,0 +1,84 @@
+.service-card {
+  display: flex;
+  justify-content: center;
+
+  padding: 30px;
+
+  @include breakpoint($breakpoint-laptop) {
+    padding: 15px;
+
+    margin-bottom: 120px;
+  }
+
+  &__picture {
+    width: 35%;
+    border-radius: 5px;
+
+    overflow: hidden;
+
+    @include breakpoint($breakpoint-laptop-large) {
+      width: 40%;
+    }
+
+    @include breakpoint($breakpoint-laptop) {
+      display: none;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+  }
+
+  &__content {
+    box-sizing: border-box;
+
+    max-width: 35%;
+    min-height: 450px;
+
+    border-radius: 5px;
+
+    margin-right: 40px;
+    padding: 25px;
+
+    background-color: $palette-white;
+    box-shadow: $shadow-primary;
+
+    @include breakpoint($breakpoint-laptop-large) {
+      max-width: 40%;
+    }
+
+    @include breakpoint($breakpoint-laptop) {
+      max-width: 100%;
+      margin-right: 0;
+
+      box-shadow: $shadow-secondary;
+    }
+  }
+
+  &__title {
+    margin-bottom: 15px;
+
+    color: $text-purple;
+    font-size: $font-size-2;
+
+    @include breakpoint($breakpoint-mobile-large) {
+      font-size: $font-size-4;
+    }
+  }
+
+  &__description {
+    max-height: 170px;
+    overflow-y: auto;
+
+    font-size: $font-size-6;
+  }
+
+  &__heading {
+    display: block;
+
+    margin-bottom: 10px;
+  }
+}
